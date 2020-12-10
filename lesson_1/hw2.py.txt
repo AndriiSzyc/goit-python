@@ -1,0 +1,24 @@
+circle = True
+while circle:
+    a = int(input ('Enter value a '))
+    if a == 0:
+        print('Enter value "a" not equal to "0" ')
+    elif a > 0 or a < 0:
+        circle = False # остановка цикла
+b = int(input ('Enter value b '))
+c = int(input ('Enter value c '))
+
+D = (b**2)-4*a*c
+if D > 0:
+    print(f'Discriminant = {D}. The equation has two distinct roots.')
+    x1 = (-b+(D**0.5))/ (2*a)
+    x2 = (-b-(D**0.5))/ (2*a)
+    print(f'x1 = {x1}; x2 = {x2}')
+elif D == 0:
+    print(f'Discriminant = {D}. The equation has exactly one root.')
+    x = -b/(2*a)
+    print(f' x = {x}')
+else:
+    print(f'Discriminant = {D}.The equation has no roots.')
+print('Thank You!')        
+    
